@@ -12,5 +12,7 @@
         <Text layoutX="268.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue !" />
         <Button fx:id="ennemisButton" layoutX="331.0" layoutY="214.0" mnemonicParsing="false" onAction="#ennemisButtonClicked" text="Cliquez ici pour voir les ennemis" />
         <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page principale" />
+      <Button fx:id="playButton" layoutX="273.0" layoutY="292.0" mnemonicParsing="false" onAction="#startGameRPG" text="Play" />
+      <Button fx:id="closeGame" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#closeAllGame" text="Cliquer ici pour quitter le jeu" />
     </children>
 </AnchorPane>

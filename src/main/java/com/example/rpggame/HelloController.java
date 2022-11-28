@@ -5,29 +5,30 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
-import rpgconsole.Hero;
-import rpgconsole.Hunter;
-import rpgconsole.Warrior;
 
-import java.awt.event.MouseEvent;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class HelloController {
 
     @FXML
     private Button ennemisButton;
+
+
     @FXML private javafx.scene.control.Button closeButton;
 
 
 
+    @FXML
+    private Button closeGame;
 
-    public HelloController() {
-    }
+    @FXML
+    private Button playButton;
+
+
+
+
+
 
 
     @FXML
@@ -53,6 +54,30 @@ public class HelloController {
         stage.show();
         stage1.close();
     }
+
+    @FXML
+    protected void playGame (ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Stage stage1 = (Stage) playButton.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("fourth-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("C'est parti !");
+        stage.setScene(scene);
+        stage.show();
+        stage1.close();
+    }
+
+
+
+
+    @FXML
+    protected void closeAllGame (ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        Stage stage1 = (Stage) closeGame.getScene().getWindow();
+        stage.close();
+        stage1.close();
+    }
+
 }
 
 

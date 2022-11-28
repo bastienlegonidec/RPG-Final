@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#affEnnemi2" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.thirdController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#affEnnemi2" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.ThirdController">
     <children>
         <Button fx:id="button1" layoutX="98.0" layoutY="149.0" mnemonicParsing="false" onAction="#affEnnemi1" text="Afficher l'ennemi 1" />
         <Button fx:id="button2" layoutX="392.0" layoutY="149.0" mnemonicParsing="false" onAction="#affEnnemi2" text="Afficher l'ennemi 2" />
