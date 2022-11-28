@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.SecondController">
+    <children>
+        <Text fx:id="affHero1" layoutX="76.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hero 1" />
+        <Text fx:id="affHero2" layoutX="74.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hero 2" />
+        <Button fx:id="button1" layoutX="75.0" layoutY="68.0" mnemonicParsing="false" onAction="#onHero1clicked" prefHeight="27.0" prefWidth="87.0" text="Afficher plus" />
+        <Button fx:id="button2" layoutX="75.0" layoutY="252.0" mnemonicParsing="false" onAction="#onHero2clicked" text="Afficher plus" />
+        <Button fx:id="button3" layoutX="421.0" layoutY="68.0" mnemonicParsing="false" onAction="#onHero3clicked" text="Afficher plus" />
+        <Button fx:id="button4" layoutX="421.0" layoutY="252.0" mnemonicParsing="false" onAction="#onHero4clicked" text="Afficher plus" />
+        <Text fx:id="affHero3" layoutX="420.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hero 3" />
+        <Text fx:id="affHero4" layoutX="420.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hero 4" />
+        <Button fx:id="returnButton2" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnTo1" text="Retour" />
+    </children>
+</AnchorPane>

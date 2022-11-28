@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.HelloController">
+    <children>
+        <Button fx:id="closeButton" layoutX="93.0" layoutY="214.0" mnemonicParsing="false" onAction="#onChangeScenebuttonClicked" text="Cliquez ici pour voir les héros" />
+        <Text layoutX="268.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue !" />
+        <Button fx:id="ennemisButton" layoutX="331.0" layoutY="214.0" mnemonicParsing="false" onAction="#ennemisButtonClicked" text="Cliquez ici pour voir les ennemis" />
+        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page principale" />
+    </children>
+</AnchorPane>
