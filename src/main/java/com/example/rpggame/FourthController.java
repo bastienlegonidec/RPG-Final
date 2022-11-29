@@ -11,12 +11,12 @@ import java.io.IOException;
 
 public class FourthController {
     @FXML
-    protected Button returnButton4;
+    protected Button returnButton;
 
     @FXML
-    protected void returnTo1 (ActionEvent event) throws IOException {
+    protected void returnto1 (ActionEvent event) throws IOException {
         Stage stage = new Stage();
-        Stage stage1 = (Stage) returnButton4.getScene().getWindow();
+        Stage stage1 = (Stage) returnButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Menu");

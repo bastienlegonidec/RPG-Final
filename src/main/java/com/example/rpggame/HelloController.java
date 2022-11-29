@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
 
 public class HelloController {
@@ -56,7 +57,7 @@ public class HelloController {
     }
 
     @FXML
-    protected void playGame (ActionEvent event) throws IOException {
+    protected void startGameRPG (ActionEvent event) throws IOException {
         Stage stage = new Stage();
         Stage stage1 = (Stage) playButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("fourth-view.fxml"));

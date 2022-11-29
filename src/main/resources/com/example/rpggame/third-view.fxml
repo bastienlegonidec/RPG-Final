@@ -7,10 +7,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#affEnnemi2" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.ThirdController">
     <children>
-        <Button fx:id="button1" layoutX="98.0" layoutY="149.0" mnemonicParsing="false" onAction="#affEnnemi1" text="Afficher l'ennemi 1" />
-        <Button fx:id="button2" layoutX="392.0" layoutY="149.0" mnemonicParsing="false" onAction="#affEnnemi2" text="Afficher l'ennemi 2" />
+        <Button fx:id="button1" layoutX="42.0" layoutY="90.0" mnemonicParsing="false" onAction="#affEnnemi1" text="Afficher l'ennemi 1" />
+        <Button fx:id="button2" layoutX="42.0" layoutY="142.0" mnemonicParsing="false" onAction="#affEnnemi2" text="Afficher l'ennemi 2" />
         <Button fx:id="returnButton3" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnTo1" text="Retour" />
-        <Text fx:id="ennemi1text" layoutX="108.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-        <Text fx:id="ennemi2text" layoutX="410.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text fx:id="affAll" layoutX="300.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="button3" layoutX="41.0" layoutY="196.0" mnemonicParsing="false" onAction="#affEnnemi3" text="Afficher l'ennemi 3" />
+      <Button fx:id="button4" layoutX="41.0" layoutY="244.0" mnemonicParsing="false" onAction="#affEnnemi4" text="Afficher l'ennemi 4" />
+      <Button fx:id="button5" layoutX="32.0" layoutY="293.0" mnemonicParsing="false" onAction="#affBoss" text="Afficher l'ennemi Boss" />
     </children>
 </AnchorPane>

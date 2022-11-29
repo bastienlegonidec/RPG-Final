@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import rpgconsole.Game;
@@ -76,27 +77,11 @@ public class ThirdController {
     }
 
 
-
-
-
     @FXML
     public void affBoss() throws IOException {
         Game tempGame1 = Game.game;
         affAll.setText("Nom : " + tempGame1.getEnemyBoss().getName() + "\n" + "Points de vie : " + tempGame1.getEnemyBoss().getHealthPoints() + "\n" + "Force : " + tempGame1.getEnemyBoss().getStrength() + "\n" + "Mana : " + tempGame1.getEnemyBoss().getMana() + "\n" + "Défense : " + tempGame1.getEnemyBoss().getDefense());
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
