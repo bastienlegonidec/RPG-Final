@@ -66,6 +66,38 @@ public class Game {
     Enemy enemy1 = new Enemy("enemy_1",100,40,10,47);
     Enemy enemy2 = new Enemy("enemy_2",100,60,4,38);
 
+    Enemy enemy3 = new Enemy("enemy_3", 100, 30, 5, 30);
+    Enemy enemy4 = new Enemy("enemy_4", 100, 15, 3, 18);
+    Enemy enemyBoss = new Enemy("enemy_boss", 200, 70, 40, 50);
+
+    public Enemy getEnemy3() {
+        return enemy3;
+    }
+
+    public void setEnemy3(Enemy enemy3) {
+        this.enemy3 = enemy3;
+    }
+
+    public Enemy getEnemy4() {
+        return enemy4;
+    }
+
+    public void setEnemy4(Enemy enemy4) {
+        this.enemy4 = enemy4;
+    }
+
+    public Enemy getEnemyBoss() {
+        return enemyBoss;
+    }
+
+    public void setEnemyBoss(Enemy enemy) {
+        this.enemyBoss = enemy;
+    }
+
+
+
+
+
 
     public static void Play() {
 
