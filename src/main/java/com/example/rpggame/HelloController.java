@@ -12,8 +12,7 @@ import java.io.IOException;
 
 public class HelloController {
 
-    @FXML
-    private Button ennemisButton;
+
 
 
     @FXML private javafx.scene.control.Button closeButton;
@@ -33,41 +32,17 @@ public class HelloController {
 
 
     @FXML
-    protected void onChangeScenebuttonClicked(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
-        Stage stage1 = (Stage) closeButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("second-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Vos héros");
-        stage.setScene(scene);
-        stage.show();
-        stage1.close();
-    }
-
-    @FXML
-    protected void ennemisButtonClicked (ActionEvent event) throws IOException {
-        Stage stage = new Stage();
-        Stage stage1 = (Stage) ennemisButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("third-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Vos énnemis");
-        stage.setScene(scene);
-        stage.show();
-        stage1.close();
-    }
-
-    @FXML
-    protected void startGameRPG (ActionEvent event) throws IOException {
+    protected void goMainPage(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         Stage stage1 = (Stage) playButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("fourth-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("second-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("C'est parti !");
+        stage.setTitle("Main page");
+
         stage.setScene(scene);
         stage.show();
         stage1.close();
     }
-
 
 
 

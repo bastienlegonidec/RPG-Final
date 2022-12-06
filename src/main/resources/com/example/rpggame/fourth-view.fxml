@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.FourthController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.FourthController">
    <children>
-      <Button fx:id="returnButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnto1" text="Retour" />
+      <Button fx:id="returnButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returntoMenu" style="-fx-background-color: black;" text="Retour" textFill="WHITE" />
+      <Button fx:id="Inventaire" layoutX="107.0" layoutY="128.0" mnemonicParsing="false" onAction="#affInventaire" style="-fx-background-color: black;" text="Inventaire" textFill="WHITE" />
+      <Button fx:id="Armes" layoutX="429.0" layoutY="128.0" mnemonicParsing="false" onAction="#AffArmes" style="-fx-background-color: black;" text="Armes" textFill="WHITE" />
+      <Text fx:id="TextInventaire" fill="WHITE" layoutX="126.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="35.0" />
+      <Text fx:id="TextArmes" fill="WHITE" layoutX="439.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="35.0" />
+      <MenuButton fx:id="chooseButton" layoutX="501.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Parcourir" textFill="WHITE">
+         <items>
+            <MenuItem fx:id="buttonHero" mnemonicParsing="false" onAction="#affHero" text="Héros" />
+            <MenuItem fx:id="returnMenu" mnemonicParsing="false" onAction="#returnToMenu2" text="Menu" />
+         </items>
+      </MenuButton>
+
    </children>
 </AnchorPane>

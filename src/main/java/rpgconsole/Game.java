@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 public class Game {
 
+
+
     public static Game game = new Game ();
     private Hero c1 = new Warrior("hero_1",100,20,0,50);
     private Hero c2 = new Hunter("hero_2",100,27,20,30);
     private Hero c3 = new Hero("hero_3",100,25,30,45);
     private Hero c4 = new Hero("hero_4",100,20,0,50);
-    public Game() {
-    }
+
 
     public void setC1(Hero c1) {
         this.c1 = c1;

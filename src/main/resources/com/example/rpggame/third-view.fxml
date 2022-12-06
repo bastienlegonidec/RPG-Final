@@ -5,14 +5,21 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#affEnnemi2" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.ThirdController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.ThirdController">
     <children>
-        <Button fx:id="button1" layoutX="42.0" layoutY="90.0" mnemonicParsing="false" onAction="#affEnnemi1" text="Afficher l'ennemi 1" />
-        <Button fx:id="button2" layoutX="42.0" layoutY="142.0" mnemonicParsing="false" onAction="#affEnnemi2" text="Afficher l'ennemi 2" />
-        <Button fx:id="returnButton3" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnTo1" text="Retour" />
-        <Text fx:id="affAll" layoutX="300.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <Button fx:id="button3" layoutX="41.0" layoutY="196.0" mnemonicParsing="false" onAction="#affEnnemi3" text="Afficher l'ennemi 3" />
-      <Button fx:id="button4" layoutX="41.0" layoutY="244.0" mnemonicParsing="false" onAction="#affEnnemi4" text="Afficher l'ennemi 4" />
-      <Button fx:id="button5" layoutX="32.0" layoutY="293.0" mnemonicParsing="false" onAction="#affBoss" text="Afficher l'ennemi Boss" />
+
+        <Button fx:id="returnButton3" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToMenu" style="-fx-background-color: black;" text="Retour" textFill="WHITE" />
+        <Text fx:id="affAll" fill="WHITE" layoutX="300.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="104.0" />
+      <Button fx:id="button1" layoutX="56.0" layoutY="87.0" mnemonicParsing="false" onAction="#affHero1" style="-fx-background-color: black;" text="Héro 1" textFill="WHITE" />
+      <Button fx:id="button2" layoutX="55.0" layoutY="161.0" mnemonicParsing="false" onAction="#affHero2" style="-fx-background-color: black;" text="Héro 2" textFill="WHITE" />
+      <Button fx:id="button3" layoutX="54.0" layoutY="236.0" mnemonicParsing="false" onAction="#affHero3" style="-fx-background-color: black;" text="Héro 3" textFill="WHITE" />
+      <Button fx:id="button4" layoutX="54.0" layoutY="310.0" mnemonicParsing="false" onAction="#affHero4" style="-fx-background-color: black;" text="Héro 4" textFill="WHITE" />
+      <MenuButton fx:id="chooseButton" layoutX="501.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Parcourir" textFill="WHITE">
+         <items>
+            <MenuItem fx:id="buttonInvent" mnemonicParsing="false" onAction="#affBibli" text="Bibliothèque" />
+            <MenuItem fx:id="returnMenu" mnemonicParsing="false" onAction="#returnToMenu2" text="Menu" />
+         </items>
+      </MenuButton>
+
     </children>
 </AnchorPane>
