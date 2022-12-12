@@ -4,14 +4,13 @@ import java.util.Scanner;
 
 public class Game {
 
-
-
     public static Game game = new Game ();
-    public String pseudo;
-    private Hero c1 = new Warrior("hero_1",100,20,0,50);
-    private Hero c2 = new Hunter("hero_2",100,27,20,30);
-    private Hero c3 = new Hero("hero_3",100,25,30,45);
-    private Hero c4 = new Hero("hero_4",100,20,0,50);
+    private final Hero c1 = new Warrior("Warrior",100,20,0,5);
+    private final Hero c2 = new Hunter("Hunter",100,27,0,30);
+    private final Hero c3 = new Mage("Mage",100,25,30,45);
+    private final Hero c4 = new Healer("Healer",100,20,40,50);
+
+
 
 
     public Hero getC1() {
@@ -42,14 +41,12 @@ public class Game {
 
 
 
+    Enemy enemy1 = new Enemy("Enemy 1",100,40,10,47);
+    Enemy enemy2 = new Enemy("Enemy 2",100,60,4,38);
 
-
-    Enemy enemy1 = new Enemy("enemy_1",100,40,10,47);
-    Enemy enemy2 = new Enemy("enemy_2",100,60,4,38);
-
-    Enemy enemy3 = new Enemy("enemy_3", 100, 30, 5, 30);
-    Enemy enemy4 = new Enemy("enemy_4", 100, 15, 3, 18);
-    Enemy enemyBoss = new Enemy("enemy_boss", 200, 70, 40, 50);
+    Enemy enemy3 = new Enemy("Enemy 3", 100, 30, 5, 30);
+    Enemy enemy4 = new Enemy("Enemy 4", 100, 15, 3, 18);
+    Enemy enemyBoss = new Enemy("Enemy boss", 200, 70, 40, 50);
 
     public Enemy getEnemy3() {
         return enemy3;
@@ -85,8 +82,38 @@ public class Game {
 
         Scanner scan = new Scanner(System.in);
 
+        /*
+        int nbHeroes = 0;
+        String heroClass = "";
 
-        Combatant combatant = new Combatant("hh",55,5,5,5);
+        System.out.println("Combien de héros voulez-vous créer ?");
+        nbHeroes = scan.nextInt();
+
+
+        for (int i = 0; i<nbHeroes; i++){
+            System.out.println("Choisissez la classe de vos héros (Hunter, Warrior, Mage ou Healer) :");
+            heroClass = scan.nextLine();
+
+            //Create heros
+            switch (heroClass) {
+                case "Warrior" -> {
+                    Hero c1 = new Warrior("Warrior", 100, 20, 0, 5);
+                }
+                case "Hunter" -> {
+                    Hero c2 = new Hunter("Hunter", 100, 27, 0, 30);
+                }
+                case "Mage" -> {
+                    Hero c3 = new Mage("Mage", 100, 25, 30, 45);
+                }
+                case "Healer" -> {
+                    Hero c4 = new Healer("Healer", 100, 20, 40, 50);
+                }
+
+
+
+            }
+
+        }*/
 
 
 
@@ -163,7 +190,7 @@ public class Game {
                 else if (choice==2){
                     choiceDone = true;
 
-                    System.out.println("Do you want to target your team(1) or the enemy team(2)? ");
+                    System.out.println("Do you want to target your team (1) or the enemy team (2)? ");
                     System.out.print("Type 1 or 2 : ");
                     int choice2 = scan.nextInt();
                     if (choice2==1){

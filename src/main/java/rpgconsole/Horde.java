@@ -3,13 +3,8 @@ package rpgconsole;
 import java.util.ArrayList;
 
 public class Horde {
-
-
-
         ArrayList<Enemy> horde = new ArrayList<>();
         boolean dead = false;
-
-
 
 
 
