@@ -57,23 +57,23 @@ public class FourthController {
         stage1.close();
     }
 
-/*
+
     @FXML
     public void affInventaire() throws IOException {
-        Game tempGame = Game.game;
-        TextInventaire.setText("Héro 1 : " + tempGame.getC1().getInventory() + "\n" + "Héro 2 : " + tempGame.getC2().getInventory() + "\n" + "Héro 3 : " + tempGame.getC3().getInventory() + "\n" + "Héro 4 : " + tempGame.getC4().getInventory());
+
+        TextInventaire.setText("Héro 1 : " + Game.getH1().getInventory() + "\n" + "Héro 2 : " + Game.getH1().getInventory() + "\n" + "Héro 3 : " + Game.getH1().getInventory() + "\n" + "Héro 4 : " + Game.getH1().getInventory());
     }
 
 
 
     @FXML
     public void AffArmes() throws IOException {
-        Game tempGame = Game.game;
+
         TextArmes.setText("Héro 1 : "  );
 
 
     }
-*/
+
 
 
 

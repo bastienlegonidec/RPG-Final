@@ -60,29 +60,29 @@ public class ThirdController {
         stage.show();
         stage1.close();
     }
-/*
+
 
     @FXML
     public void affHero1() throws IOException {
-        Game tempGame = Game.game;
-        affAll.setText("Name : " + tempGame.getC1().getName() + "\n" + "Points de vie : " + tempGame.getC1().getHealthPoints() + "\n" + "Force : " + tempGame.getC1().getStrength() + "\n" + "Mana : " + tempGame.getC1().getMana() + "\n" + "Défense : " + tempGame.getC1().getDefense());
+
+        affAll.setText("Name : " + Game.getH1().getName() + "\n" + "Points de vie : " + Game.getH1().getHealthPoints() + "\n" + "Force : " + Game.getH1().getStrength() + "\n" + "Mana : " + Game.getH1().getMana() + "\n" + "Défense : " + Game.getH1().getDefense());
     }
 
     public void affHero2() throws IOException {
-        Game tempGame1 = Game.game;
-        affAll.setText("Name : " + tempGame1.getC2().getName()+ "\n" + "Points de vie : " + tempGame1.getC2().getHealthPoints() + "\n" + "Force : " + tempGame1.getC2().getStrength() + "\n" + "Mana : " + tempGame1.getC2().getMana() + "\n" + "Défense : " + tempGame1.getC2().getDefense());
+
+        affAll.setText("Name : " + Game.getH2().getName()+ "\n" + "Points de vie : " + Game.getH2().getHealthPoints() + "\n" + "Force : " + Game.getH2().getStrength() + "\n" + "Mana : " + Game.getH2().getMana() + "\n" + "Défense : " + Game.getH2().getDefense());
     }
 
     public void affHero3() throws IOException {
-        Game tempGame2 = Game.game;
-        affAll.setText("Name : " + tempGame2.getC3().getName()+ "\n" + "Points de vie : " + tempGame2.getC3().getHealthPoints() + "\n" + "Force : " + tempGame2.getC3().getStrength() + "\n" + "Mana : " + tempGame2.getC3().getMana() + "\n" + "Défense : " + tempGame2.getC3().getDefense());
+
+        affAll.setText("Name : " + Game.getH3().getName()+ "\n" + "Points de vie : " + Game.getH3().getHealthPoints() + "\n" + "Force : " + Game.getH3().getStrength() + "\n" + "Mana : " + Game.getH3().getMana() + "\n" + "Défense : " + Game.getH3().getDefense());
     }
 
     public void affHero4() throws IOException {
-        Game tempGame3 = Game.game;
-        affAll.setText("Name : " + tempGame3.getC4().getName()+ "\n" + "Points de vie : " + tempGame3.getC4().getHealthPoints() + "\n" + "Force : " + tempGame3.getC4().getStrength() + "\n" + "Mana : " + tempGame3.getC4().getMana() + "\n" + "Défense : " + tempGame3.getC4().getDefense());
 
-    }*/
+        affAll.setText("Name : " + Game.getH4().getName()+ "\n" + "Points de vie : " + Game.getH4().getHealthPoints() + "\n" + "Force : " + Game.getH4().getStrength() + "\n" + "Mana : " + Game.getH4().getMana() + "\n" + "Défense : " + Game.getH4().getDefense());
+
+    }
 
 
 

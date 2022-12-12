@@ -5,10 +5,44 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    static Hero h1 = new Hunter("Hunter", 100, 50, 10, 2);
-    static Hero h2 = new Warrior("Warrior", 100, 45, 18, 5);
-    static Hero h3 = new Mage("Mage", 100, 59, 10, 4);
-    static Hero h4 = new Healer("Healer", 100, 65, 5, 9);
+    public static Hero h1 = new Hunter("Hunter", 100, 50, 10, 2);
+    public static Hero h2 = new Warrior("Warrior", 100, 45, 18, 5);
+    public static Hero h3 = new Mage("Mage", 100, 59, 10, 4);
+    public static Hero h4 = new Healer("Healer", 100, 65, 5, 9);
+
+    public static Hero getH1() {
+        return h1;
+    }
+
+    public static void setH1(Hero h1) {
+        Game.h1 = h1;
+    }
+
+    public static Hero getH2() {
+        return h2;
+    }
+
+    public static void setH2(Hero h2) {
+        Game.h2 = h2;
+    }
+
+    public static Hero getH3() {
+        return h3;
+    }
+
+    public static void setH3(Hero h3) {
+        Game.h3 = h3;
+    }
+
+    public static Hero getH4() {
+        return h4;
+    }
+
+    public static void setH4(Hero h4) {
+        Game.h4 = h4;
+    }
+
+
 
 
     public static void Play() {
