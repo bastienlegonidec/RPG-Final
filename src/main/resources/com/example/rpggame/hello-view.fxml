@@ -8,8 +8,13 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.HelloController">
-    <children>
-      <Button fx:id="playButton" layoutX="250.0" layoutY="293.0" mnemonicParsing="false" onAction="#goMainPage" style="-fx-background-color: black;" text="Nouvelle partie" textFill="WHITE" />
-      <Button fx:id="closeGame" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeAllGame" style="-fx-background-color: black;" text="Quitter" textFill="WHITE" />
-    </children>
+   <children>
+       <Button fx:id="playButton" layoutX="250.0" layoutY="293.0" mnemonicParsing="false" onAction="#goMainPage" style="-fx-background-color: black;" text="Nouvelle partie" textFill="WHITE" />
+       <Button fx:id="closeGame" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeAllGame" style="-fx-background-color: black;" text="Quitter" textFill="WHITE" />
+      <ImageView fitHeight="214.0" fitWidth="436.0" layoutX="96.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../logoRPG.jpg" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>

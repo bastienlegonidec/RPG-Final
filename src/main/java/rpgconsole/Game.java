@@ -7,35 +7,12 @@ public class Game {
 
 
     public static Game game = new Game ();
+    public String pseudo;
     private Hero c1 = new Warrior("hero_1",100,20,0,50);
     private Hero c2 = new Hunter("hero_2",100,27,20,30);
     private Hero c3 = new Hero("hero_3",100,25,30,45);
     private Hero c4 = new Hero("hero_4",100,20,0,50);
 
-
-    public void setC1(Hero c1) {
-        this.c1 = c1;
-    }
-
-    public void setC2(Hero c2) {
-        this.c2 = c2;
-    }
-
-    public void setC3(Hero c3) {
-        this.c3 = c3;
-    }
-
-    public void setC4(Hero c4) {
-        this.c4 = c4;
-    }
-
-    public void setEnemy1(Enemy enemy1) {
-        this.enemy1 = enemy1;
-    }
-
-    public void setEnemy2(Enemy enemy2) {
-        this.enemy2 = enemy2;
-    }
 
     public Hero getC1() {
         return c1;
@@ -60,6 +37,9 @@ public class Game {
     public Enemy getEnemy2() {
         return enemy2;
     }
+
+
+
 
 
 
@@ -112,8 +92,6 @@ public class Game {
 
 
 
-
-
         //create weapon
         Sword sword = new Sword();
         Axe axe = new Axe();
@@ -150,6 +128,9 @@ public class Game {
         Horde horde = new Horde();
         horde.addEnemy(game.enemy1);
         horde.addEnemy(game.enemy2);
+        horde.addEnemy(game.enemy3);
+        horde.addEnemy(game.enemy4);
+        horde.addEnemy(game.enemyBoss);
 
 
         System.out.println("Your team :" );

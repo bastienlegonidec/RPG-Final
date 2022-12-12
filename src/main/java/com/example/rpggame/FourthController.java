@@ -69,10 +69,11 @@ public class FourthController {
     @FXML
     public void AffArmes() throws IOException {
         Game tempGame = Game.game;
-        TextArmes.setText("Héro 1 : " + tempGame.getC1().getArmory());
+        TextArmes.setText("Héro 1 : "  );
 
 
     }
+
 
 
 

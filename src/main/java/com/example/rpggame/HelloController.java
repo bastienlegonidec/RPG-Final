@@ -5,7 +5,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 
 
 import java.io.IOException;
@@ -13,10 +17,10 @@ import java.io.IOException;
 public class HelloController {
 
 
-
-
-    @FXML private javafx.scene.control.Button closeButton;
-
+    @FXML
+    private ImageView imageMain;
+    @FXML
+    private javafx.scene.control.Button closeButton;
 
 
     @FXML
@@ -24,11 +28,6 @@ public class HelloController {
 
     @FXML
     private Button playButton;
-
-
-
-
-
 
 
     @FXML
@@ -45,16 +44,12 @@ public class HelloController {
     }
 
 
-
     @FXML
-    protected void closeAllGame (ActionEvent event) throws IOException {
+    protected void closeAllGame(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         Stage stage1 = (Stage) closeGame.getScene().getWindow();
         stage.close();
         stage1.close();
     }
-
 }
-
-
 

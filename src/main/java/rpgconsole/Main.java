@@ -13,6 +13,7 @@ public class Main {
         if (choice == 1){
             Game game = new Game();
             Game.Play();
+
         }else{
             HelloApplication helloApplication = new HelloApplication();
             HelloApplication.main();
