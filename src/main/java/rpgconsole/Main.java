@@ -11,7 +11,7 @@ public class Main {
 
         int choice = sc.nextInt();
         if (choice == 1){
-            Game game = new Game();
+
             Game.Play();
 
         }else{

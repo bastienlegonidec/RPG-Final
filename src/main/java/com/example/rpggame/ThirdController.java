@@ -60,7 +60,7 @@ public class ThirdController {
         stage.show();
         stage1.close();
     }
-
+/*
 
     @FXML
     public void affHero1() throws IOException {
@@ -82,7 +82,7 @@ public class ThirdController {
         Game tempGame3 = Game.game;
         affAll.setText("Name : " + tempGame3.getC4().getName()+ "\n" + "Points de vie : " + tempGame3.getC4().getHealthPoints() + "\n" + "Force : " + tempGame3.getC4().getStrength() + "\n" + "Mana : " + tempGame3.getC4().getMana() + "\n" + "Défense : " + tempGame3.getC4().getDefense());
 
-    }
+    }*/
 
 
 

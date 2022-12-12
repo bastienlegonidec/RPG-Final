@@ -33,11 +33,16 @@ public class Horde {
         public void printEnemy(){
             for (int i = 0 ;i<this.horde.size();i++){
                 System.out.print(i+1 +") " + this.horde.get(i).getName() + " : " +  this.horde.get(i).getHealthPoints() + "hp, ");
-                System.out.println(this.horde.get(i).getMana() + " mana");
+                System.out.println(this.horde.get(i).getStrength() + " Strength, ");
+                //System.out.print(this.horde.get(i).getMana()+ " Mana, ");
+                //System.out.println(this.horde.get(i).getDefense()+ " Defense");
+
             }
 
 
         }
+
+
     }
 
 

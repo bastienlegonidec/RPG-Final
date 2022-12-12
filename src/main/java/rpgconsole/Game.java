@@ -1,122 +1,56 @@
 package rpgconsole;//Program made by Bastien Le Gonidec
 
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-
-    public static Game game = new Game ();
-    private final Hero c1 = new Warrior("Warrior",100,20,0,5);
-    private final Hero c2 = new Hunter("Hunter",100,27,0,30);
-    private final Hero c3 = new Mage("Mage",100,25,30,45);
-    private final Hero c4 = new Healer("Healer",100,20,40,50);
-
-
-
-
-    public Hero getC1() {
-        return c1;
-    }
-
-    public Hero getC2() {
-        return c2;
-    }
-
-    public Hero getC3() {
-        return c3;
-    }
-
-    public Hero getC4() {
-        return c4;
-    }
-
-    public Enemy getEnemy1() {
-        return enemy1;
-    }
-
-    public Enemy getEnemy2() {
-        return enemy2;
-    }
-
-
-
-
-
-    Enemy enemy1 = new Enemy("Enemy 1",100,40,10,47);
-    Enemy enemy2 = new Enemy("Enemy 2",100,60,4,38);
-
-    Enemy enemy3 = new Enemy("Enemy 3", 100, 30, 5, 30);
-    Enemy enemy4 = new Enemy("Enemy 4", 100, 15, 3, 18);
-    Enemy enemyBoss = new Enemy("Enemy boss", 200, 70, 40, 50);
-
-    public Enemy getEnemy3() {
-        return enemy3;
-    }
-
-    public void setEnemy3(Enemy enemy3) {
-        this.enemy3 = enemy3;
-    }
-
-    public Enemy getEnemy4() {
-        return enemy4;
-    }
-
-    public void setEnemy4(Enemy enemy4) {
-        this.enemy4 = enemy4;
-    }
-
-    public Enemy getEnemyBoss() {
-        return enemyBoss;
-    }
-
-    public void setEnemyBoss(Enemy enemy) {
-        this.enemyBoss = enemy;
-    }
-
-
-
-
+    static Hero h1 = new Hunter("Hunter", 100, 50, 10, 2);
+    static Hero h2 = new Warrior("Warrior", 100, 45, 18, 5);
+    static Hero h3 = new Mage("Mage", 100, 59, 10, 4);
+    static Hero h4 = new Healer("Healer", 100, 65, 5, 9);
 
 
     public static void Play() {
 
+        Scanner scanner = new Scanner(System.in);
 
-        Scanner scan = new Scanner(System.in);
-
-        /*
-        int nbHeroes = 0;
-        String heroClass = "";
-
+        // Demande au joueur le nombre de héros
         System.out.println("Combien de héros voulez-vous créer ?");
-        nbHeroes = scan.nextInt();
+        int nbHeroes = scanner.nextInt();
 
+        // Création d'un tableau pour stocker les héros
+        Hero[] heroes = new Hero[nbHeroes];
 
-        for (int i = 0; i<nbHeroes; i++){
-            System.out.println("Choisissez la classe de vos héros (Hunter, Warrior, Mage ou Healer) :");
-            heroClass = scan.nextLine();
+        // Demande à chaque joueur de choisir sa classe
+        for (int i = 0; i < nbHeroes; i++) {
+            System.out.println("Quelle est la classe du héros " + (i + 1) + " ?");
+            System.out.println("1. Hunter");
+            System.out.println("2. Warrior");
+            System.out.println("3. Mage");
+            System.out.println("4. Healer");
+            int choice = scanner.nextInt();
 
-            //Create heros
-            switch (heroClass) {
-                case "Warrior" -> {
-                    Hero c1 = new Warrior("Warrior", 100, 20, 0, 5);
-                }
-                case "Hunter" -> {
-                    Hero c2 = new Hunter("Hunter", 100, 27, 0, 30);
-                }
-                case "Mage" -> {
-                    Hero c3 = new Mage("Mage", 100, 25, 30, 45);
-                }
-                case "Healer" -> {
-                    Hero c4 = new Healer("Healer", 100, 20, 40, 50);
-                }
-
-
-
+            // Création du héros en fonction de la classe choisie
+            switch (choice) {
+                case 1:
+                    heroes[i] = h1;
+                    break;
+                case 2:
+                    heroes[i] = h2;
+                    break;
+                case 3:
+                    heroes[i] = h3;
+                    break;
+                case 4:
+                    heroes[i] = h4;
+                    break;
+                default:
+                    System.out.println("Vous devez choisir une classe valide !");
+                    i--;
+                    break;
             }
-
-        }*/
-
-
-
+        }
 
 
         //create weapon
@@ -129,38 +63,41 @@ public class Game {
         ManaPotion manaPotion = new ManaPotion();
 
 
+        h1.addArmory(sword);
+        h1.addArmory(axe);
+        h1.addInventory(apple);
+        h1.addInventory(manaPotion);
 
-        game.c1.addArmory(sword);
-        game.c1.addArmory(axe);
-        game.c1.addInventory(apple);
-        game.c1.addInventory(manaPotion);
 
-        game.c2.addInventory(manaPotion);
+        h2.addInventory(manaPotion);
 
-        game.c3.addArmory(axe);
-        game.c3.addArmory(healingStick);
+        h3.addArmory(axe);
+        h3.addArmory(healingStick);
 
-        game.c4.addArmory(sword);
 
+        h4.addArmory(sword);
+
+
+        Enemy gobelin = new Enemy("Gobelin", 100, 5, 3, 100);
+        Enemy orque = new Enemy("Orque", 100, 8, 4, 12);
+        Enemy loupgarou = new Enemy("Loup-garou", 100, 10, 5, 12);
+        Enemy troll = new Enemy("Troll", 150, 15, 8, 13);
+        Enemy boss = new Enemy("Boss", 200, 20, 20, 14);
 
         Team team = new Team();
-        team.addHero(game.c1);
-        team.addHero(game.c2);
-        team.addHero(game.c3);
-        team.addHero(game.c4);
-
-
+        for (int i = 0; i < nbHeroes; i++) {
+            team.addHero(heroes[i]);
+        }
 
 
         Horde horde = new Horde();
-        horde.addEnemy(game.enemy1);
-        horde.addEnemy(game.enemy2);
-        horde.addEnemy(game.enemy3);
-        horde.addEnemy(game.enemy4);
-        horde.addEnemy(game.enemyBoss);
+        horde.addEnemy(gobelin);
+        horde.addEnemy(orque);
+        horde.addEnemy(loupgarou);
+        horde.addEnemy(troll);
+        //horde.addEnemy(boss);
 
-
-        System.out.println("Your team :" );
+        System.out.println("Your team :");
         team.printHero();
 
         System.out.println();
@@ -168,51 +105,59 @@ public class Game {
         horde.printEnemy();
 
 
-
         int turn = 0;
-        while (horde.isDead()==false){
+        while (!horde.isDead()) {
             System.out.println("\n");
-            System.out.println("It's the turn of " + team.getHero(turn).getName());
-            System.out.print("He has " + team.getHero(turn).getHealthPoints()  + " hp and " );
-            System.out.println(team.getHero(turn).getMana() + " mana.");
+
 
             //action du hero
             boolean choiceDone = false;
-            while (choiceDone==false){
+            while (!choiceDone) {
                 System.out.println("Do you want to see the inventory (1), interact (2) or use an item (3)?");
                 System.out.print("Type 1, 2 or 3 : ");
-                int choice = scan.nextInt();
-                if (choice==1){
+                int choice = scanner.nextInt();
+                if (choice == 1) {
                     team.getHero(turn).printInventory();
                     System.out.println("\n");
-                }
 
-                else if (choice==2){
+
+                } else if (choice == 2) {
                     choiceDone = true;
 
-                    System.out.println("Do you want to target your team (1) or the enemy team (2)? ");
-                    System.out.print("Type 1 or 2 : ");
-                    int choice2 = scan.nextInt();
-                    if (choice2==1){
-                        System.out.println("Your team is composed of : ");
-                        team.printHero();
-                        System.out.println("Witch one do you want to target? ");
-                        System.out.print("Type his number ");
-                        int target = scan.nextInt();
-                        team.getHero(turn).interact(team.getHero(target-1));
-                    }
+                    System.out.println("Your team is composed of : ");
+                    team.printHero();
+                    System.out.println("\n");
 
-                    else if (choice2==2){
-                        System.out.println("The enemy team is composed of : ");
-                        horde.printEnemy();
-                        System.out.println("Witch one do you want to target? ");
-                        System.out.print("Type his number ");
-                        int target = scan.nextInt();
-                        team.getHero(turn).interact(horde.getEnemy(target-1));
-                        horde.getEnemy(target-1).updateAlive();
-                        if (horde.getEnemy(target-1).getIsAlive()==false){
-                            System.out.println(horde.getEnemy(target-1).getName() + " is dead");
-                            horde.removeEnemy(horde.getEnemy(target-1));}
+                    System.out.println("Witch hero do you want to choose? ");
+                    System.out.print("Type his number : ");
+                    int choiceHero = scanner.nextInt();
+                    System.out.println("It's the turn of " + team.getHero(choiceHero-1).getName());
+
+                    System.out.println("Vous allez affronter un ennemi !");
+                    System.out.println("\n");
+                    horde.printEnemy();
+                    System.out.println("\n");
+                    System.out.println("choisi un ennemi : ");
+                    int target = scanner.nextInt();
+
+                    team.getHero(turn).interact(horde.getEnemy(target-1));
+                    horde.getEnemy(target - 1).updateAlive();
+
+
+
+
+                    // créer attaque ennemi
+                    /*
+                    team.getHero(turn).interact(horde.getEnemy(target - 1));
+                    horde.getEnemy(target - 1).updateAlive();
+
+                     */
+
+
+
+                    if (!horde.getEnemy(target - 1).getIsAlive()) {
+                        System.out.println(horde.getEnemy(target - 1).getName() + "is dead");
+                        horde.removeEnemy(horde.getEnemy(target - 1));
 
 
                     }
@@ -221,7 +166,8 @@ public class Game {
 
                 }
 
-                else if (choice==3){
+
+                /*else if (choice==3){
                     choiceDone = true;
                     team.getHero(turn).consume();
                 }
@@ -229,13 +175,113 @@ public class Game {
                 else{
                     System.out.println("Instruction unclear");
                     System.out.println("\n");
+                } */
+            }
+
+
+            //update turn
+            if (turn < team.getSize() - 1) {
+                turn++;
+            } else {
+                turn = 0;
+            }
+
+
+        }
+
+
+    }
+
+}
+
+
+/*
+                else if (choice == 2) {
+                    choiceDone = true;
+                    System.out.println("Your team is composed of : ");
+                    team.printHero();
+                    System.out.println("\n");
+                    System.out.println("Vous allez affronter un ennemi !");
+                    System.out.println("\n");
+                    horde.printEnemy();
+                    System.out.println("\n");
+
+
+
+                    System.out.println("Witch hero do you want to choose? ");
+                    System.out.print("Type his number : ");
+                    int choiceHero = scanner.nextInt();
+                    System.out.println("It's the turn of " + team.getHero(target - 1).getName());
+                    team.getHero(target - 1).interact(horde.getEnemy(turn));
+
+                    horde.getEnemy(target - 1).updateAlive();
+                    if (horde.getEnemy(target - 1).getIsAlive() == false) {
+                        System.out.println(horde.getEnemy(target - 1).getName() + "is dead");
+                        horde.removeEnemy(horde.getEnemy(target - 1));
+
+
+                    }
+
+
+                    team.getHero(turn).interact(horde.getEnemy(target - 1));
+                    horde.getEnemy(target - 1).updateAlive();
+
+                    if (horde.getEnemy(target - 1).getIsAlive() == false) {
+                        System.out.println(horde.getEnemy(target - 1).getName() + " is dead");
+                        horde.removeEnemy(horde.getEnemy(target - 1));
+                    }
+                }
+
+
+                int choice2 = scanner.nextInt();
+                if (choice2 == 1) {
+                    System.out.println("Your team is composed of : ");
+                    team.printHero();
+                    System.out.println("Witch one do you want to target? ");
+                    System.out.print("Type his number ");
+                    int target = scanner.nextInt();
+                    team.getHero(turn).interact(team.getHero(target - 1));
+                    team.getHero(turn).interact(horde.getEnemy(target - 1));
+                    horde.getEnemy(target - 1).updateAlive();
+                    if (horde.getEnemy(target - 1).getIsAlive() == false) {
+                        System.out.println(horde.getEnemy(target - 1).getName() + " is dead");
+                        horde.removeEnemy(horde.getEnemy(target - 1));
+                    }
+                } else if (choice2 == 2) {
+                    System.out.println("The enemy team is composed of : ");
+                    horde.printEnemy();
+                    System.out.println("Witch one do you want to target? ");
+                    System.out.print("Type his number ");
+                    int target = scanner.nextInt();
+                    team.getHero(turn).interact(horde.getEnemy(target - 1));
+                    horde.getEnemy(target - 1).updateAlive();
+                    if (horde.getEnemy(target - 1).getIsAlive() == false) {
+                        System.out.println(horde.getEnemy(target - 1).getName() + " is dead");
+                        horde.removeEnemy(horde.getEnemy(target - 1));
+                    }
+
+
+                }
+
+                System.out.println("\n");
+
+
+                if (choice == 3) {
+                    choiceDone = true;
+                    team.getHero(turn).consume();
+                } else {
+                    System.out.println("Instruction unclear");
+                    System.out.println("\n");
                 }
             }
 
 
             //update turn
-            if(turn< team.getSize()-1){turn++;}
-            else {turn=0;}
+            if (turn < team.getSize() - 1) {
+                turn++;
+            } else {
+                turn = 0;
+            }
 
 
         }
@@ -246,4 +292,8 @@ public class Game {
 
 
     }
-}
+}*/
+
+
+
+

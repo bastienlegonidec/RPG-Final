@@ -12,7 +12,8 @@ public class Physical_Weapon extends Weapon{
 
 
 
-        int damageDealt = (int)Math.round(damage*(100-target.getDefense())/100);
+        int damageDealt = (2);
+        //int damageDealt = (int)Math.round(damage*(100-target.getDefense())/100);
 
         target.updateHP(-damageDealt);
 

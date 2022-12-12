@@ -57,7 +57,7 @@ public class FourthController {
         stage1.close();
     }
 
-
+/*
     @FXML
     public void affInventaire() throws IOException {
         Game tempGame = Game.game;
@@ -73,7 +73,7 @@ public class FourthController {
 
 
     }
-
+*/
 
 
 
