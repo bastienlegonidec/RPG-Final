@@ -15,7 +15,7 @@ public class Hero extends Combatant{
     //action
     public void interact(Combatant target){
         System.out.print("You are about to interact with " + target.getName() + " (HP = " + target.getHealthPoints());
-        System.out.println(" , defense = " + target.getDefense() + " )");
+        System.out.println(" ,defense = " + target.getDefense() + " )");
         Scanner scan = new Scanner(System.in);
         int choice = 0;
         if (this.getArmory().size()>1){

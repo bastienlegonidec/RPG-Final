@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    public static Hero h1 = new Hunter("Hunter", 100, 50, 10, 2);
+    public static Hero h1 = new Hunter("Hunter", 100, 50, 80, 2);
     public static Hero h2 = new Warrior("Warrior", 100, 45, 18, 5);
     public static Hero h3 = new Mage("Mage", 100, 59, 10, 4);
     public static Hero h4 = new Healer("Healer", 100, 65, 5, 9);
@@ -95,6 +95,7 @@ public class Game {
         //create item
         Apple apple = new Apple();
         ManaPotion manaPotion = new ManaPotion();
+        Poison poison = new Poison();
 
 
         h1.addArmory(sword);
@@ -107,16 +108,17 @@ public class Game {
 
         h3.addArmory(axe);
         h3.addArmory(healingStick);
+        h3.addArmory(poison);
 
 
         h4.addArmory(sword);
 
 
         Enemy gobelin = new Enemy("Gobelin", 100, 5, 3, 100);
-        Enemy orque = new Enemy("Orque", 100, 8, 4, 12);
+        Enemy orque = new Enemy("Orque", 200, 8, 4, 12);
         Enemy loupgarou = new Enemy("Loup-garou", 100, 10, 5, 12);
-        Enemy troll = new Enemy("Troll", 150, 15, 8, 13);
-        Enemy boss = new Enemy("Boss", 200, 20, 20, 14);
+        Enemy troll = new Enemy("Troll", 300, 15, 8, 13);
+        Enemy boss = new Enemy("Boss", 600, 20, 20, 14);
 
         Team team = new Team();
         for (int i = 0; i < nbHeroes; i++) {
@@ -129,7 +131,7 @@ public class Game {
         horde.addEnemy(orque);
         horde.addEnemy(loupgarou);
         horde.addEnemy(troll);
-        //horde.addEnemy(boss);
+        horde.addEnemy(boss);
 
         System.out.println("Your team :");
         team.printHero();
@@ -162,7 +164,7 @@ public class Game {
                     team.printHero();
                     System.out.println("\n");
 
-                    System.out.println("Witch hero do you want to choose? ");
+                    System.out.println("Wich hero do you want to choose? ");
                     System.out.print("Type his number : ");
                     int choiceHero = scanner.nextInt();
                     System.out.println("It's the turn of " + team.getHero(choiceHero-1).getName());
@@ -174,7 +176,7 @@ public class Game {
                     System.out.println("choisi un ennemi : ");
                     int target = scanner.nextInt();
 
-                    team.getHero(turn).interact(horde.getEnemy(target-1));
+                    team.getHero(choiceHero-1).interact(horde.getEnemy(target-1));
                     horde.getEnemy(target - 1).updateAlive();
 
 
@@ -201,7 +203,7 @@ public class Game {
                 }
 
 
-                /*else if (choice==3){
+                else if (choice==3){
                     choiceDone = true;
                     team.getHero(turn).consume();
                 }
@@ -209,7 +211,7 @@ public class Game {
                 else{
                     System.out.println("Instruction unclear");
                     System.out.println("\n");
-                } */
+                }
             }
 
 
