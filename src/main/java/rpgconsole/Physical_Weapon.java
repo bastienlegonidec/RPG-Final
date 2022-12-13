@@ -24,7 +24,8 @@ public class Physical_Weapon extends Weapon{
     }
 
 
-    public int getDamage(){return this.damage;}
+    public int getDamage(){
+        return this.damage;}
 
 
 }

@@ -5,20 +5,65 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.MenuItem;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import rpgconsole.Game;
+import rpgconsole.Hero;
 
 import java.io.IOException;
 
 public class ThirdController {
+    public MenuItem chooseHunterButton;
+    public MenuItem chooseWarriorButton;
+    public MenuItem chooseMageButton;
+    public MenuItem chooseHealerButton;
+    public MenuButton choiceHeroButton;
+    @FXML
+    public Text textHeroChoisi;
     @FXML
     private Button returnButton3;
 
 
     @FXML
     private Text affAll;
+
+
+
+
+
+
+
+    @FXML
+    protected void chooseHunter() throws IOException {
+        textHeroChoisi.setText("vous avez choisi : "+ Game.getH1().getName());
+
+
+
+
+    }
+
+
+    @FXML
+    protected void chooseWarrior() throws IOException {
+        textHeroChoisi.setText("vous avez choisi : "+ Game.getH2().getName());
+
+    }
+
+    @FXML
+    protected Hero  chooseMage() throws IOException {
+        return Game.getH3();
+
+    }
+
+
+    @FXML
+    protected Hero chooseHealer() throws IOException {
+        return Game.getH4();
+    }
+
+
 
 
 

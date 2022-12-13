@@ -61,7 +61,7 @@ public class FourthController {
     @FXML
     public void affInventaire() throws IOException {
 
-        TextInventaire.setText("Héro 1 : " + Game.getH1().getInventory() + "\n" + "Héro 2 : " + Game.getH1().getInventory() + "\n" + "Héro 3 : " + Game.getH1().getInventory() + "\n" + "Héro 4 : " + Game.getH1().getInventory());
+        TextInventaire.setText("Héro 1 : " +Game.getH1().getInventory()+  "\n" + "Héro 2 : " + Game.getH2().getInventory() + "\n" + "Héro 3 : " + Game.getH3().getInventory() + "\n" + "Héro 4 : " + Game.getH4().getInventory());
     }
 
 
@@ -69,7 +69,7 @@ public class FourthController {
     @FXML
     public void AffArmes() throws IOException {
 
-        TextArmes.setText("Héro 1 : "  );
+        TextArmes.setText("Héro 1 : " + Game.getH1().getArmory() +"\n" + "Héro 2 : " + Game.getH2().getArmory()+"\n" + "Héro 3 : " + Game.getH3().getArmory()+"\n" + "Héro 4 : " + Game.getH4().getArmory());
 
 
     }

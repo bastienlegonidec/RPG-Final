@@ -8,19 +8,34 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.ThirdController">
     <children>
+      <ImageView fx:id="fondEcran" fitHeight="400.0" fitWidth="783.0" layoutX="-87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fondEcran.jpg" />
+         </image>
+      </ImageView>
 
         <Button fx:id="returnButton3" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToMenu" style="-fx-background-color: black;" text="Retour" textFill="WHITE" />
         <Text fx:id="affAll" fill="WHITE" layoutX="300.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="104.0" />
-      <Button fx:id="button1" layoutX="56.0" layoutY="87.0" mnemonicParsing="false" onAction="#affHero1" style="-fx-background-color: black;" text="Héro 1" textFill="WHITE" />
-      <Button fx:id="button2" layoutX="55.0" layoutY="161.0" mnemonicParsing="false" onAction="#affHero2" style="-fx-background-color: black;" text="Héro 2" textFill="WHITE" />
-      <Button fx:id="button3" layoutX="54.0" layoutY="236.0" mnemonicParsing="false" onAction="#affHero3" style="-fx-background-color: black;" text="Héro 3" textFill="WHITE" />
-      <Button fx:id="button4" layoutX="54.0" layoutY="310.0" mnemonicParsing="false" onAction="#affHero4" style="-fx-background-color: black;" text="Héro 4" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisissez votre héro parmis les 4" />
+      <Button fx:id="button1" layoutX="56.0" layoutY="87.0" mnemonicParsing="false" onAction="#affHero1" style="-fx-background-color: black;" text="Hunter" textFill="WHITE" />
+      <Button fx:id="button2" layoutX="55.0" layoutY="161.0" mnemonicParsing="false" onAction="#affHero2" style="-fx-background-color: black;" text="Warrior" textFill="WHITE" />
+      <Button fx:id="button3" layoutX="54.0" layoutY="236.0" mnemonicParsing="false" onAction="#affHero3" style="-fx-background-color: black;" text="Mage" textFill="WHITE" />
+      <Button fx:id="button4" layoutX="54.0" layoutY="310.0" mnemonicParsing="false" onAction="#affHero4" style="-fx-background-color: black;" text="Healer" textFill="WHITE" />
       <MenuButton fx:id="chooseButton" layoutX="501.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Parcourir" textFill="WHITE">
          <items>
             <MenuItem fx:id="buttonInvent" mnemonicParsing="false" onAction="#affBibli" text="Bibliothèque" />
             <MenuItem fx:id="returnMenu" mnemonicParsing="false" onAction="#returnToMenu2" text="Menu" />
          </items>
       </MenuButton>
+      <MenuButton fx:id="choiceHeroButton" layoutX="205.0" layoutY="43.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Choix héro" textFill="WHITE">
+        <items>
+            <MenuItem fx:id="chooseHunterButton" mnemonicParsing="false" onAction="#chooseHunter" text="Hunter" />
+          <MenuItem fx:id="chooseWarriorButton" mnemonicParsing="false" onAction="#chooseWarrior" text="Warrior" />
+          <MenuItem fx:id="chooseMageButton" mnemonicParsing="false" onAction="#chooseMage" text="Mage" />
+            <MenuItem fx:id="chooseHealerButton" mnemonicParsing="false" onAction="#chooseHealer" text="Healer" />
+        </items>
+      </MenuButton>
+      <Text fx:id="textHeroChoisi" fill="WHITE" layoutX="327.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" />
 
     </children>
 </AnchorPane>

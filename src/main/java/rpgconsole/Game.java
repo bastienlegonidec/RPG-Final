@@ -1,6 +1,7 @@
 package rpgconsole;//Program made by Bastien Le Gonidec
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -50,15 +51,15 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
 
         // Demande au joueur le nombre de héros
-        System.out.println("Combien de héros voulez-vous créer ?");
-        int nbHeroes = scanner.nextInt();
+        System.out.println("Combien de heros voulez-vous creer ?");
+        int nbHeros = scanner.nextInt();
 
         // Création d'un tableau pour stocker les héros
-        Hero[] heroes = new Hero[nbHeroes];
+        Hero[] heroes = new Hero[nbHeros];
 
         // Demande à chaque joueur de choisir sa classe
-        for (int i = 0; i < nbHeroes; i++) {
-            System.out.println("Quelle est la classe du héros " + (i + 1) + " ?");
+        for (int i = 0; i < nbHeros; i++) {
+            System.out.println("Quelle est la classe du heros " + (i + 1) + " ?");
             System.out.println("1. Hunter");
             System.out.println("2. Warrior");
             System.out.println("3. Mage");
@@ -88,9 +89,13 @@ public class Game {
 
 
         //create weapon
+        Fist fist = new Fist();
+        Bow bow = new Bow();
         Sword sword = new Sword();
         Axe axe = new Axe();
         HealingStick healingStick = new HealingStick();
+
+
 
         //create item
         Apple apple = new Apple();
@@ -98,30 +103,46 @@ public class Game {
         Poison poison = new Poison();
 
 
-        h1.addArmory(sword);
-        h1.addArmory(axe);
-        h1.addInventory(apple);
+        h1.addArmory(bow);
         h1.addInventory(manaPotion);
+        h1.addInventory(apple);
 
 
+
+        h2.addArmory(fist);
         h2.addInventory(manaPotion);
-
-        h3.addArmory(axe);
-        h3.addArmory(healingStick);
-        h3.addArmory(poison);
+        h2.addInventory(apple);
+        h2.addArmory(sword);
 
 
-        h4.addArmory(sword);
+
+        h3.addInventory(manaPotion);
 
 
-        Enemy gobelin = new Enemy("Gobelin", 100, 5, 3, 100);
-        Enemy orque = new Enemy("Orque", 200, 8, 4, 12);
-        Enemy loupgarou = new Enemy("Loup-garou", 100, 10, 5, 12);
-        Enemy troll = new Enemy("Troll", 300, 15, 8, 13);
-        Enemy boss = new Enemy("Boss", 600, 20, 20, 14);
+
+        h3.addInventory(apple);
+
+
+
+
+        h4.addInventory(manaPotion);
+
+
+
+        h4.addInventory(apple);
+
+
+
+        Enemy gobelin = new Enemy("Gobelin", 100, 75, 20, 100);
+        Enemy orque = new Enemy("Orque", 200, 75, 20, 100);
+        Enemy loupgarou = new Enemy("Loup Garou", 300, 75, 20, 100);
+        Enemy troll = new Enemy("Troll", 400, 75, 20, 100);
+        Enemy boss = new Enemy("Boss", 600, 75, 20, 100);
+
+
 
         Team team = new Team();
-        for (int i = 0; i < nbHeroes; i++) {
+        for (int i = 0; i < nbHeros; i++) {
             team.addHero(heroes[i]);
         }
 
@@ -149,51 +170,54 @@ public class Game {
             //action du hero
             boolean choiceDone = false;
             while (!choiceDone) {
-                System.out.println("Do you want to see the inventory (1), interact (2) or use an item (3)?");
+                System.out.println("Do you want to : " + "\n" + "see the inventory (1)" + "\n" + "interact (2)" + "\n" + "use an item (3)?" + "\n" );
                 System.out.print("Type 1, 2 or 3 : ");
                 int choice = scanner.nextInt();
                 if (choice == 1) {
-                    team.getHero(turn).printInventory();
-                    System.out.println("\n");
-
-
-                } else if (choice == 2) {
-                    choiceDone = true;
-
                     System.out.println("Your team is composed of : ");
+                    System.out.println("\n");
                     team.printHero();
                     System.out.println("\n");
-
-                    System.out.println("Wich hero do you want to choose? ");
+                    System.out.println("Witch hero do you want to choose? ");
                     System.out.print("Type his number : ");
                     int choiceHero = scanner.nextInt();
-                    System.out.println("It's the turn of " + team.getHero(choiceHero-1).getName());
-
-                    System.out.println("Vous allez affronter un ennemi !");
+                    team.getHero(choiceHero-1).printInventory();
                     System.out.println("\n");
-                    horde.printEnemy();
-                    System.out.println("\n");
-                    System.out.println("choisi un ennemi : ");
-                    int target = scanner.nextInt();
 
-                    team.getHero(choiceHero-1).interact(horde.getEnemy(target-1));
-                    horde.getEnemy(target - 1).updateAlive();
+                }else if (choice == 2) {
+                    int i = 0;
+                    choiceDone = true;
+                    while (i<3) {
 
+                        System.out.println("Your team is composed of : ");
+                        System.out.println("\n");
+                        team.printHero();
+                        System.out.println("\n");
 
+                        System.out.println("Witch hero do you want to choose? ");
+                        System.out.print("Type his number : ");
+                        int choiceHero = scanner.nextInt();
+                        System.out.println("It's the turn of " + team.getHero(choiceHero - 1).getName());
+                        System.out.println("\n");
 
+                        System.out.println("Vous allez affronter un ennemi !");
+                        System.out.println("\n");
+                        horde.printEnemy();
+                        System.out.println("\n");
+                        System.out.println("choisi un ennemi : ");
+                        int target = scanner.nextInt();
 
-                    // créer attaque ennemi
-                    /*
-                    team.getHero(turn).interact(horde.getEnemy(target - 1));
-                    horde.getEnemy(target - 1).updateAlive();
+                        team.getHero(choiceHero - 1).interact(horde.getEnemy(target - 1));
+                        horde.getEnemy(target - 1).updateAlive();
 
-                     */
+                        if (!horde.getEnemy(target - 1).getIsAlive()) {
+                            System.out.println(horde.getEnemy(target - 1).getName() + "is dead");
+                            horde.removeEnemy(horde.getEnemy(target - 1));
+                            i++;
+                        }
 
+                        //attaque de l'ennemi avec simulation aléatoire :
 
-
-                    if (!horde.getEnemy(target - 1).getIsAlive()) {
-                        System.out.println(horde.getEnemy(target - 1).getName() + "is dead");
-                        horde.removeEnemy(horde.getEnemy(target - 1));
 
 
                     }
@@ -203,7 +227,7 @@ public class Game {
                 }
 
 
-                else if (choice==3){
+                /*else if (choice==3){
                     choiceDone = true;
                     team.getHero(turn).consume();
                 }
@@ -211,7 +235,7 @@ public class Game {
                 else{
                     System.out.println("Instruction unclear");
                     System.out.println("\n");
-                }
+                } */
             }
 
 
@@ -296,30 +320,6 @@ public class Game {
                         horde.removeEnemy(horde.getEnemy(target - 1));
                     }
 
-
-                }
-
-                System.out.println("\n");
-
-
-                if (choice == 3) {
-                    choiceDone = true;
-                    team.getHero(turn).consume();
-                } else {
-                    System.out.println("Instruction unclear");
-                    System.out.println("\n");
-                }
-            }
-
-
-            //update turn
-            if (turn < team.getSize() - 1) {
-                turn++;
-            } else {
-                turn = 0;
-            }
-
-
         }
 
 
@@ -329,7 +329,3 @@ public class Game {
 
     }
 }*/
-
-
-
-

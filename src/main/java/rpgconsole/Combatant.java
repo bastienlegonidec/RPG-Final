@@ -126,7 +126,15 @@ public class Combatant {
 
 
     }
+    public int faireAttaque(){
+        int damage = this.strength *2;
+        return damage;
 
+    }
+    public void recevoirDamage(int damage){
+        int damage_recu = damage*((100 - this.defense*2)/100);
+        this.healthPoints = this.healthPoints - damage_recu;
+    }
 
 
 }

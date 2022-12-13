@@ -14,7 +14,7 @@ public class Hero extends Combatant{
 
     //action
     public void interact(Combatant target){
-        System.out.print("You are about to interact with " + target.getName() + " (HP = " + target.getHealthPoints());
+        System.out.print("You are about to interact with " + (target).getName() + " (HP = " + target.getHealthPoints());
         System.out.println(" ,defense = " + target.getDefense() + " )");
         Scanner scan = new Scanner(System.in);
         int choice = 0;
@@ -52,7 +52,7 @@ public class Hero extends Combatant{
 
             System.out.print("What item do you want to use? Type it's number : ");
 
-            int choice = scan.nextInt()-1;
+            int choice = scan.nextInt() -1;
             this.getInventory().get(choice).consume(this);
             this.deleteInventory(this.getInventory().get(choice));
             System.out.println(this.getName() +  " now has " + this.getHealthPoints() + "hp and " + this.getMana() + " mana");

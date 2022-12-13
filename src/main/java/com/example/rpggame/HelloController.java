@@ -16,9 +16,9 @@ import java.io.IOException;
 
 public class HelloController {
 
-
     @FXML
-    private ImageView imageMain;
+    public ImageView fondEcran;
+
     @FXML
     private javafx.scene.control.Button closeButton;
 

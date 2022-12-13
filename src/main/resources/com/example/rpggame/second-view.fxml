@@ -9,6 +9,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpggame.SecondController">
     <children>
+      <ImageView fitHeight="400.0" fitWidth="855.0" layoutX="-87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../fondEcran.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1) Cliquer sur &quot;Parcourir&quot; pour choisir votre héro" />
 
 
         <Button fx:id="returnButton2" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnTo1" style="-fx-background-color: black;" text="Retour" textFill="WHITE" />
