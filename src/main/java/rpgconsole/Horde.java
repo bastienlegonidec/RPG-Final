@@ -10,6 +10,8 @@ public class Horde<Ennemi> {
     boolean dead = false;
 
 
+
+
     public int getSize() {
         return this.horde.size();
     }

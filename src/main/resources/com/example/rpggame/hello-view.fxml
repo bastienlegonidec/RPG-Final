@@ -14,7 +14,22 @@
             <Image url="@../../../fondEcran.jpg" />
          </image>
       </ImageView>
-       <Button fx:id="closeGame" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeAllGame" style="-fx-background-color: black;" text="Quitter" textFill="WHITE" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="386.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../nuage.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="806.0" layoutX="-78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../pluie.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../nuage.gif" />
+         </image>
+      </ImageView>
        <Button fx:id="playButton" layoutX="250.0" layoutY="293.0" mnemonicParsing="false" onAction="#goMainPage" style="-fx-background-color: black;" text="Nouvelle partie" textFill="WHITE" />
+       <Button fx:id="closeGame" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeAllGame" style="-fx-background-color: black;" text="Quitter" textFill="WHITE" />
    </children>
 </AnchorPane>

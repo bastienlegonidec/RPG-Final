@@ -117,18 +117,14 @@ public class Game {
 
 
         h3.addInventory(manaPotion);
-
-
-
+        h3.addArmory(poison);
         h3.addInventory(apple);
 
 
 
 
         h4.addInventory(manaPotion);
-
-
-
+        h4.addArmory(axe);
         h4.addInventory(apple);
 
 
@@ -210,6 +206,8 @@ public class Game {
                         team.getHero(choiceHero - 1).interact(horde.getEnemy(target - 1));
                         horde.getEnemy(target - 1).updateAlive();
 
+
+
                         if (!horde.getEnemy(target - 1).getIsAlive()) {
                             System.out.println(horde.getEnemy(target - 1).getName() + "is dead");
                             horde.removeEnemy(horde.getEnemy(target - 1));
@@ -220,6 +218,7 @@ public class Game {
 
 
 
+
                     }
 
                     System.out.println("\n");
@@ -227,7 +226,7 @@ public class Game {
                 }
 
 
-                /*else if (choice==3){
+                else if (choice==3){
                     choiceDone = true;
                     team.getHero(turn).consume();
                 }
@@ -235,7 +234,7 @@ public class Game {
                 else{
                     System.out.println("Instruction unclear");
                     System.out.println("\n");
-                } */
+                }
             }
 
 

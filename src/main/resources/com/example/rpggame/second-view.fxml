@@ -14,7 +14,21 @@
             <Image url="@../../../fondEcran.jpg" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1) Cliquer sur &quot;Parcourir&quot; pour choisir votre héro" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="52.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../nuage.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="396.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../nuage.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="885.0" layoutX="-78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../pluie.gif" />
+         </image>
+      </ImageView>
 
 
         <Button fx:id="returnButton2" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnTo1" style="-fx-background-color: black;" text="Retour" textFill="WHITE" />
@@ -24,5 +38,6 @@
           <MenuItem fx:id="buttonInvent" mnemonicParsing="false" onAction="#affBibli" text="Bibliothèque" />
         </items>
       </MenuButton>
+      <Text fill="WHITE" layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1) Cliquer sur &quot;Parcourir&quot; pour choisir votre héro" />
     </children>
 </AnchorPane>
