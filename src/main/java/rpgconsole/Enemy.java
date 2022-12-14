@@ -12,16 +12,13 @@ public class Enemy<Ennemi> extends Combatant{
     private static final Enemy troll = new Enemy("Troll", 300, 15, 8, 13);
     private static final Enemy boss = new Enemy("Boss", 600, 20, 20, 14);
 
+     */
 
 
-    public static final Enemy[][] listeEnemie = {
-            {gobelin},
-            {orque},
-            {loupgarou},
-            {troll},
-            {boss}
 
-    };*/
+
+
+
 
     public Enemy(String name, int healthPoints, int strength, int mana, int defense) {
         super(name, healthPoints, strength, mana, defense);
@@ -37,6 +34,7 @@ public class Enemy<Ennemi> extends Combatant{
 
 
     }
+
 
 
 

@@ -171,7 +171,6 @@ public class Game {
                 int choice = scanner.nextInt();
                 if (choice == 1) {
                     System.out.println("Your team is composed of : ");
-                    System.out.println("\n");
                     team.printHero();
                     System.out.println("\n");
                     System.out.println("Witch hero do you want to choose? ");
@@ -205,6 +204,11 @@ public class Game {
 
                         team.getHero(choiceHero - 1).interact(horde.getEnemy(target - 1));
                         horde.getEnemy(target - 1).updateAlive();
+
+
+
+
+
 
 
 
@@ -254,77 +258,3 @@ public class Game {
 }
 
 
-/*
-                else if (choice == 2) {
-                    choiceDone = true;
-                    System.out.println("Your team is composed of : ");
-                    team.printHero();
-                    System.out.println("\n");
-                    System.out.println("Vous allez affronter un ennemi !");
-                    System.out.println("\n");
-                    horde.printEnemy();
-                    System.out.println("\n");
-
-
-
-                    System.out.println("Witch hero do you want to choose? ");
-                    System.out.print("Type his number : ");
-                    int choiceHero = scanner.nextInt();
-                    System.out.println("It's the turn of " + team.getHero(target - 1).getName());
-                    team.getHero(target - 1).interact(horde.getEnemy(turn));
-
-                    horde.getEnemy(target - 1).updateAlive();
-                    if (horde.getEnemy(target - 1).getIsAlive() == false) {
-                        System.out.println(horde.getEnemy(target - 1).getName() + "is dead");
-                        horde.removeEnemy(horde.getEnemy(target - 1));
-
-
-                    }
-
-
-                    team.getHero(turn).interact(horde.getEnemy(target - 1));
-                    horde.getEnemy(target - 1).updateAlive();
-
-                    if (horde.getEnemy(target - 1).getIsAlive() == false) {
-                        System.out.println(horde.getEnemy(target - 1).getName() + " is dead");
-                        horde.removeEnemy(horde.getEnemy(target - 1));
-                    }
-                }
-
-
-                int choice2 = scanner.nextInt();
-                if (choice2 == 1) {
-                    System.out.println("Your team is composed of : ");
-                    team.printHero();
-                    System.out.println("Witch one do you want to target? ");
-                    System.out.print("Type his number ");
-                    int target = scanner.nextInt();
-                    team.getHero(turn).interact(team.getHero(target - 1));
-                    team.getHero(turn).interact(horde.getEnemy(target - 1));
-                    horde.getEnemy(target - 1).updateAlive();
-                    if (horde.getEnemy(target - 1).getIsAlive() == false) {
-                        System.out.println(horde.getEnemy(target - 1).getName() + " is dead");
-                        horde.removeEnemy(horde.getEnemy(target - 1));
-                    }
-                } else if (choice2 == 2) {
-                    System.out.println("The enemy team is composed of : ");
-                    horde.printEnemy();
-                    System.out.println("Witch one do you want to target? ");
-                    System.out.print("Type his number ");
-                    int target = scanner.nextInt();
-                    team.getHero(turn).interact(horde.getEnemy(target - 1));
-                    horde.getEnemy(target - 1).updateAlive();
-                    if (horde.getEnemy(target - 1).getIsAlive() == false) {
-                        System.out.println(horde.getEnemy(target - 1).getName() + " is dead");
-                        horde.removeEnemy(horde.getEnemy(target - 1));
-                    }
-
-        }
-
-
-        System.out.println("\n" + "\n" + "\n");
-        System.out.println("You defeated the enemy team");
-
-
-    }
-}*/

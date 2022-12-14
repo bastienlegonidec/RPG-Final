@@ -57,7 +57,6 @@ public class ThirdController {
 
     @FXML
     protected Hero chooseHealer() throws IOException {
-
         return h4;
     }
 
@@ -65,7 +64,7 @@ public class ThirdController {
 
     @FXML
     protected void startAllGame(ActionEvent event) throws IOException {
-        textHeroChoisi.setText("vous avez choisi : "  );
+        textHeroChoisi.setText("vous avez choisi : " );
 
 
 
